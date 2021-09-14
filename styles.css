@@ -165,14 +165,11 @@ header {
 .header-inner #logo {
     align-items: center;
     display: flex;
-    max-width: 100%;
 }
 
 .header-inner #logo img {
     display: block;
-    max-height: 75%;
-    max-width: 300px;
-    width: 100%;
+    height: 80%;
 }
 
 .main-nav {
@@ -257,7 +254,6 @@ header {
  Hero image
 ***/
 .hero {
-    /* height: 300px; */
     width: 100%;
 }
 
@@ -276,17 +272,78 @@ header {
     padding: 25px var(--content-side-padding);
 }
 
-.main-content picture {
-    display: flex;
-    justify-content: center;
+
+/***
+ Footer content
+***/
+.footer {
+    background: hsl(0deg, 0%, 95%);
+    width: 100%;
 }
 
-.main-content img {
-    /* margin-left: calc(-50px - var(--content-side-padding)); */
+.footer .inner-footer {
+    margin: 0 auto;
+    max-width: var(--content-width);
+    padding: 25px var(--content-side-padding) 50px;
+}
+
+
+/***
+ Text over image
+***/
+
+.text-over-image {
+    align-items: center;
+    background: hsl(0deg, 0%, 95%);
+    display: flex;
+    position: relative;
+}
+
+.text-over-image .text-block {
+    font-size: 1.4em;
+    /* left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 80%; */
+    width: 100%;
+    z-index: 10;
+}
+
+.text-over-image .text-block p {
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    background: hsl(0deg, 0%, 97%, 0.65);
+    border-radius: 5px;
+    box-shadow: 0 2px 10px hsl(0deg, 0%, 50%, 0.2);
+    margin: 0 auto 40px;
+    padding: 6px 15px;
+    width: 80%;
+    z-index: 10;
+}
+
+.text-over-image picture {
+    display: flex;
+    justify-content: center;
+    /* margin: 50px 0; */
+    margin-left: -100%;
+    width: 100%;
+    z-index: 1;
+}
+
+.text-over-image img {
     max-height: 800px;
     max-width: 100vw;
-    /* width: calc(var(--content-width) + 100px); */
 }
+
+.text-over-image.tall-image .text-block p {
+    max-width: 500px;
+}
+
+.text-over-image.tall-image img {
+    max-width: 550px;
+}
+
 
 /***
  Media queries content
@@ -306,6 +363,33 @@ header {
     }
 }
 
+@media screen and (max-width: 1200px) {
+    .text-over-image .text-block {
+        font-size: 1.2em;
+    }
+
+    .text-over-image .text-block p {
+        margin-bottom: 35px;
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .text-over-image .text-block {
+        font-size: 1.1em;
+    }
+
+    .text-over-image .text-block p {
+        margin-bottom: 20px;
+        width: 92%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .text-over-image.tall-image img {
+        max-width: 100%;
+    }
+}
 @media screen and (max-width: 700px) {
     body {
         padding: var(--header-height-mini) 0 0 0;
@@ -359,5 +443,18 @@ header {
 
     .main-content {
         padding: 15px var(--content-side-padding-fluid);
+    }
+
+    .footer .inner-footer {
+        padding: 25px var(--content-side-padding-fluid) 50px;
+    }
+
+    .text-over-image .text-block {
+        font-size: 1em;
+    }
+
+    .text-over-image .text-block p {
+        margin: 10px auto;
+        width: 96%;
     }
 }
