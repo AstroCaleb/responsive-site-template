@@ -197,11 +197,11 @@ header {
 }
 
 .nav-toggle-icon:before {
-    animation: toggleLineTopOut var(--nav-toggle-animation-speed) ease 0s normal forwards;
+    transform: rotate(0deg) translateY(-3px);
 }
 
 .nav-toggle-icon:after {
-    animation: toggleLineBottomOut var(--nav-toggle-animation-speed) ease 0s normal forwards;
+    transform: rotate(0deg) translateY(3px);
 }
 
 #nav-toggle {
@@ -245,32 +245,6 @@ header {
     }
     100% {
         transform: rotate(-45deg);
-    }
-}
-
-@keyframes toggleLineTopOut {
-    0% {
-        transform: rotate(45deg);
-    }
-    50% {
-        transform: translateY(0px);
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: translateY(-3px);
-    }
-}
-
-@keyframes toggleLineBottomOut {
-    0% {
-        transform: rotate(-45deg);
-    }
-    50% {
-        transform: translateY(0px);
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: translateY(3px);
     }
 }
 
