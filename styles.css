@@ -166,6 +166,7 @@ header {
 .header-inner #logo {
     align-items: center;
     display: flex;
+    max-width: 250px;
 }
 
 .header-inner #logo img {
