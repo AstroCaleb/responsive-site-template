@@ -4,7 +4,7 @@ This is a quick guide to the more complicated visual components that aren't just
 
 ## Hero Image
 
-The hero image section, if applicable, should be placed immediately after the closing of the <header> tag. The hero section markup should follow this format:
+The hero image section, if applicable, should be placed immediately after the closing of the `<header>` tag. The hero section markup should follow this format:
 
 ```
 <section class="hero">
@@ -34,13 +34,13 @@ The hero image section, if applicable, should be placed immediately after the cl
 </section>
 ```
 
-The <source> tags can be as many or as few as needed based on available image size variations for the hero image. Just ensure the media queries set don't overlap, that way there is high confidence as to when a specific image will load based on viewport width.
+The `<source>` tags can be as many or as few as needed based on available image size variations for the hero image. Just ensure the media queries set don't overlap, that way there is high confidence as to when a specific image will load based on viewport width.
   
 ## Text Over Image
   
 This applies to all images within the main content regardless if there's going to be text rendered over it or not. The default style here applies to images that have a landscape aspect ratio.
   
-If the image is going to have a portrait aspect ratio, please add a class of `tall-image` to the opening section tag like so: `<section class="text-over-image tall-image">`
+If the image is going to have a portrait aspect ratio, add a class of `tall-image` to the opening section tag like so: `<section class="text-over-image tall-image">`
   
 ```
 <section class="text-over-image">
